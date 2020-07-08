@@ -1,0 +1,17 @@
+.contact h1 {
+    color: $white;
+}
+
+.contact header {
+    background-image: url(../assets/contact-header.jpg);
+    min-height: initial;
+}
+
+.contact header .wrapper {
+    justify-content: flex-start;
+    min-height: initial;
+}
+
+.contact h1 {
+    width: 100%;
+}

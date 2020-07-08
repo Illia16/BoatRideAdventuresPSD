@@ -1,0 +1,59 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    line-height: 2.8rem;
+    letter-spacing: 0.1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+button {
+    font-family: 'IM Fell English', serif;
+}
+
+h1 {
+    font-size: 7.9rem;
+    color: $dandelion;
+    line-height: initial;
+    width: 50%;
+}
+
+h2 {
+    font-size: 4.5rem;
+    line-height: 9.98rem;
+}
+
+h3 {
+    @include boxedSideHeadings(4rem, 5.8rem, 0.13rem);
+}
+
+h4 {
+    @include boxedSideHeadings(2.5rem, 5.8rem, 0.08rem);
+}
+
+button {
+    font-size: 2.24rem;
+    text-align: center;
+    line-height: 4.16rem;
+
+    background: $dandelion;
+    color: $twilightBlue;
+}
+
+nav {
+    text-align: center;
+    line-height: 2.9rem;
+    letter-spacing: 0.1rem;
+}
+
+nav a {
+    color: $white;
+    border-bottom: 4px solid transparent;
+}
+
+nav a:hover {
+    border-bottom: 4px solid $dandelion;
+    transition: all 0.5s;
+}

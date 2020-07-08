@@ -1,0 +1,5 @@
+@mixin boxedSideHeadings($fontSize, $lineHeightSize, $letterSpacingSize) {
+        font-size: $fontSize;
+        line-height: $lineHeightSize;
+        letter-spacing: $letterSpacingSize;
+    }
