@@ -1,10 +1,14 @@
+// Styles for Contact page 
+
 .contact h1 {
     color: $white;
+    width: 100%;
+    // margin: 10px 0;
 }
 
 .contact header {
     background-image: url(../assets/contact-header.jpg);
-    min-height: initial;
+    // min-height: 50vh;
 }
 
 .contact header .wrapper {
@@ -12,6 +16,145 @@
     min-height: initial;
 }
 
-.contact h1 {
+
+// Section //////////////////////////////////////////////////////////////////////////////////////////////////////////
+.contact section {
+    padding: 50px 0 250px 0;
+}
+
+.contact section .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    position: relative;
+    z-index: 5;
+}
+
+// contactInfo //////////////////////
+
+.contactInfo {
+    // margin: 40px 0;
+    flex: 1 0 320px;
+}
+
+.contactInfo p {
+    white-space: pre-line;
+    margin: 0;
+}
+
+.contactInfo ul {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 2.5rem;
+}
+
+.contactInfo ul li {
+    margin-right: 10px;
+}
+
+.contactInfo ul li:first-child a {
+    padding-left: 0;
+}
+
+.contactInfo a {
+    color: $twilightBlue;
+    padding: 15px;
+}
+
+.contactInfo a:hover,
+.contactInfo a:focus {
+    color: $dandelion;
+    transition: all 0.5s;
+}
+
+// Form //////////////////////
+
+
+.formContact,
+.formContact .nameText input,
+.formContact textarea {
+    background: $twilightBlue;
+}
+
+.formContact .nameText input,
+.formContact textarea {
+    color: $white;
+    padding: 20px;
+}
+
+.formContact {
+    // flex: 2 0 600px;
+    padding: $distanceBetween;
+
+    // height: 600px;
+    width: 65%;
+    position: absolute;
+    right: 0;
+    bottom: -70%;
+}
+
+.formContact::after {
+    content: "";
+    position: absolute;
+    left: 30px;
+    right: -15px;
+    top: 30px;
+    bottom: -15px;
+    background: $dandelion;
+
+    z-index: -1;
+}
+
+.formContact .nameText {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.formContact .nameText input {
+    // flex-basis: 120px;
+    width: calc((100%/2) - (60px/2));
+    height: $distanceBetween;
+    border: 3px solid transparent;
+    border-bottom: 3px solid $dandelion;
+}
+
+// .formContact .nameText input[type="text"] {
+//     margin-right: $distanceBetween/2;
+// }
+
+// .formContact .nameText input[type="email"] {
+//     margin-left: $distanceBetween/2;
+// }
+
+.formContact textarea {
+    // height: auto;
     width: 100%;
+    border: 3px solid $dandelion;
+    margin-top: $distanceBetween;
+    resize: none;
+}
+
+input[type="submit"] {
+    height: $distanceBetween;
+    margin-top: $distanceBetween;
+    width: 100%;
+    border: 3px solid transparent;
+}
+
+input[type="submit"]:hover {
+    background: none;
+    color: $dandelion;
+    border: 3px solid $dandelion;
+    transition: all 0.5s;
+}
+
+.formContact .nameText input:focus {
+    border: 3px solid $dandelion;
+    transition: all 0.5s;
+}
+
+.formContact ::placeholder {
+    color: white;
+    opacity: 1;
 }

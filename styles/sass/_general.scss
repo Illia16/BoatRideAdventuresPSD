@@ -1,23 +1,99 @@
+// Styles for body
 body {
     font-family: 'Roboto', sans-serif;
+    color: $twilightBlue;
     font-size: 2rem;
     line-height: 2.8rem;
     letter-spacing: 0.1rem;
+}
+
+main {
+    background: $iceBlue;
+}
+
+// Styles for all 3 pages headers
+// Styling the HOME page first, then change individually other pages if something's different
+header {
+    background-image: url(../assets/home-header.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    min-height: 100vh;
+    position: relative;
+}
+
+// Navigation bar
+nav {
+    text-align: center;
+    line-height: 2.9rem;
+    letter-spacing: 0.1rem;
+}
+
+header nav ul {
+    padding: 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header nav li {
+    margin-right: 35px;
+    flex-basis: 100px
+}
+
+header nav a {
+    padding: $aClickableSpaceTB $aClickableSpaceLR;
+    color: $white;
+    position: relative;
+}
+
+nav li a::after {
+    content: "";
+    position: absolute;
+    right: $aClickableSpaceLR;
+    left: $aClickableSpaceLR;
+    bottom: $aClickableSpaceTB - 5px;
+    border-bottom: 4px solid $dandelion;
+
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+nav li a:hover::after,
+nav li a:focus::after {
+    opacity: 1;
+}
+
+header .wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
 }
 
 h1,
 h2,
 h3,
 h4,
-button {
+button,
+input[type="submit"] {
     font-family: 'IM Fell English', serif;
 }
+
+input[type="text"],
+input[type="email"],
+textarea {
+font-family: 'Roboto', sans-serif;
+}
+
 
 h1 {
     font-size: 7.9rem;
     color: $dandelion;
     line-height: initial;
     width: 50%;
+
+    z-index: 5;
 }
 
 h2 {
@@ -33,7 +109,9 @@ h4 {
     @include boxedSideHeadings(2.5rem, 5.8rem, 0.08rem);
 }
 
-button {
+button,
+input[type="submit"] {
+    border: none;
     font-size: 2.24rem;
     text-align: center;
     line-height: 4.16rem;
@@ -42,18 +120,14 @@ button {
     color: $twilightBlue;
 }
 
-nav {
+
+// Footer for ALL pages
+footer {
+    background: $dandelion;
     text-align: center;
-    line-height: 2.9rem;
-    letter-spacing: 0.1rem;
+    padding: 5px 0;
 }
 
-nav a {
-    color: $white;
-    border-bottom: 4px solid transparent;
-}
-
-nav a:hover {
-    border-bottom: 4px solid $dandelion;
-    transition: all 0.5s;
+footer p {
+    margin: 0;
 }
