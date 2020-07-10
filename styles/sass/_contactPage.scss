@@ -1,19 +1,21 @@
 // Styles for Contact page 
-
 .contact h1 {
     color: $white;
     width: 100%;
-    // margin: 10px 0;
+    margin: 10vh 0;
 }
 
 .contact header {
     background-image: url(../assets/contact-header.jpg);
-    // min-height: 50vh;
 }
 
 .contact header .wrapper {
     justify-content: flex-start;
     min-height: initial;
+}
+
+.contact header nav ul {
+    flex-wrap: nowrap;
 }
 
 
@@ -27,14 +29,11 @@
     flex-wrap: wrap;
 
     position: relative;
-    z-index: 5;
 }
 
 // contactInfo //////////////////////
-
 .contactInfo {
-    // margin: 40px 0;
-    flex: 1 0 320px;
+    flex: 1 0 100%;
 }
 
 .contactInfo p {
@@ -44,7 +43,6 @@
 
 .contactInfo ul {
     display: flex;
-    flex-wrap: wrap;
     font-size: 2.5rem;
 }
 
@@ -64,12 +62,9 @@
 .contactInfo a:hover,
 .contactInfo a:focus {
     color: $dandelion;
-    transition: all 0.5s;
 }
 
 // Form //////////////////////
-
-
 .formContact,
 .formContact .nameText input,
 .formContact textarea {
@@ -83,26 +78,15 @@
 }
 
 .formContact {
-    // flex: 2 0 600px;
+    flex: 1 0 320px;
     padding: $distanceBetween;
 
-    // height: 600px;
     width: 65%;
+
     position: absolute;
     right: 0;
     bottom: -70%;
-}
-
-.formContact::after {
-    content: "";
-    position: absolute;
-    left: 30px;
-    right: -15px;
-    top: 30px;
-    bottom: -15px;
-    background: $dandelion;
-
-    z-index: -1;
+    box-shadow: 15px 15px $dandelion;
 }
 
 .formContact .nameText {
@@ -112,23 +96,13 @@
 }
 
 .formContact .nameText input {
-    // flex-basis: 120px;
-    width: calc((100%/2) - (60px/2));
+    width: calc((100%/2) - (40px/2));
     height: $distanceBetween;
     border: 3px solid transparent;
     border-bottom: 3px solid $dandelion;
 }
 
-// .formContact .nameText input[type="text"] {
-//     margin-right: $distanceBetween/2;
-// }
-
-// .formContact .nameText input[type="email"] {
-//     margin-left: $distanceBetween/2;
-// }
-
 .formContact textarea {
-    // height: auto;
     width: 100%;
     border: 3px solid $dandelion;
     margin-top: $distanceBetween;
@@ -142,16 +116,15 @@ input[type="submit"] {
     border: 3px solid transparent;
 }
 
-input[type="submit"]:hover {
+input[type="submit"]:hover,
+input[type="submit"]:focus {
     background: none;
     color: $dandelion;
     border: 3px solid $dandelion;
-    transition: all 0.5s;
 }
 
 .formContact .nameText input:focus {
     border: 3px solid $dandelion;
-    transition: all 0.5s;
 }
 
 .formContact ::placeholder {

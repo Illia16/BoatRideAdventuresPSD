@@ -1,0 +1,81 @@
+// Media quaries to Home &(or) Contact page /////////////////////////////////////////////
+@media (max-width: 1000px) {
+
+    // Home quaries ///////////////////////////
+
+    // our white-colored links interact with background white boats
+    // it's hard to read. So, either change font color or reposition background. 
+    header {
+        background-position: left; 
+    }
+
+    .home h1 {
+        width: 100%;
+    }
+
+    .home header .headerImage {
+        position: static;
+        width: 75%;
+        margin: 0 0 0 auto;
+    }
+
+    // Home & Contact quaries ///////////////////////////
+    h1 {
+        font-size: 6rem;
+        text-align: center;
+        margin: 30px 0;
+    }
+
+    header nav li {
+        margin-right: 0;
+        margin-top: 15px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+
+    // Contact quaries ///////////////////////////
+    .contact section .wrapper {
+        justify-content: center;
+    }
+
+    .contact section {
+        padding: 50px 0;
+    }
+
+    .contactInfo {
+        margin-bottom: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .contactInfo p:first-of-type {
+        margin-right: 25px;
+    }
+
+    .formContact {
+        position: static;
+        box-shadow: 10px 10px $dandelion;
+    }
+}
+
+
+@media (max-width: 500px) { 
+    .home h1 {
+        font-size: 4rem;
+    }
+
+    .formContact .nameText input {
+        width: 100%;
+    }
+
+    .formContact .nameText input:nth-of-type(2) {
+        margin-top: $distanceBetween;
+    }
+
+}
+
+
