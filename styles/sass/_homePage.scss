@@ -1,12 +1,13 @@
 // Styles for HomePage Header
 
 .headerImage {
-    width: 50%;
+    width: 57%;
+    max-width: 1000px;
     position: absolute;
     right: 0;
-    bottom: -40%;
+    bottom: -250px;
     min-width: 300px;
-    max-width: 1000px;
+    // max-width: 1000px;
 }
 
 
@@ -19,8 +20,6 @@
 .sectionOne ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-left: 70px;
 
     // display:grid;
     // grid-template-columns: repeat(2, 1fr);
@@ -30,9 +29,8 @@
 }
 
 .sectionOne ul li {
-    width: calc(100%/2 - 60px);
-    min-width: 320px;
-    // flex: 1 0 400px;
+    flex: 1 0 calc(100%/2 - 70px);
+    margin-left: 70px;
 }
 
 .sectionOne ul li:nth-child(1),
@@ -73,4 +71,146 @@
 
 .sectionOne ul li:nth-child(4)::before {
     content: "\f095";
+}
+
+
+// Section TWO
+
+.sectionTwo {
+    background: $twilightBlue;
+    padding: 100px 0;
+}
+
+.sectionTwo h3 {
+    margin: 0;
+}
+
+.sectionTwo p {
+    margin-bottom: 40px;
+}
+
+.sectionTwo ul {
+    display: flex;
+    flex-wrap: wrap;
+    // flex-direction: column;
+}
+
+.sectionTwo ul li {
+    display: flex;
+    flex-wrap: wrap;
+
+    // justify-content: space-between;
+    // flex: 1 0 calc(40% - 20px);
+    // width: calc(100%/2 - 40px);
+}
+
+.sectionTwo ul li .sectionTwocontent,
+.sectionTwo ul li .sectionTwocontentImage {
+    // width: calc(100%/2 - 80px);
+    flex: 1 0 calc(100%/2 - 80px);
+}
+
+.sectionTwo .sectionTwocontent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sectionTwo .sectionTwocontentImage,
+.sectionTwo .sectionTwocontent {
+    min-width: 320px;
+}
+
+.sectionTwo ul li:first-child {
+    margin-bottom: 50px;
+}
+
+.sectionTwo ul li:last-child {
+    margin-top: 50px;
+    text-align: right;
+}
+
+.sectionTwo ul li div:nth-of-type(2) {
+    margin-left: 80px;
+}
+
+.sectionTwo li:first-child img {
+    box-shadow: 15px 15px $dandelion;
+    // position: absolute;
+    left: -10%;
+    top: -50%;
+    // width: 50%;
+}
+
+.sectionTwo li:last-child img {
+    box-shadow: -15px 15px $dandelion;
+    // position: absolute;
+    right: -10%;
+    bottom: -50%;
+    // width: 50%;
+}
+
+// .sectionTwo li {
+//     position: relative;
+// }
+
+
+// .sectionTwo li:first-child {
+//     position: absolute;
+//     left: 0;
+//     top: 0;
+// }
+
+// .sectionTwo li:last-child {
+//     position: absolute;
+//     right: 0;
+//     bottom: 0;
+// }
+
+
+// Section THREE
+.sectionThree .sectionThreeContent{
+    // height: calc(50vh - 200px);
+    width: 70%;
+    text-align: center;
+    margin: 100px auto;
+}
+
+.sectionThreeBack {
+    height: 50vh;
+    background-image: url(../assets/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+// Section FOUR
+
+.sectionFour {
+    background: linear-gradient($iceBlue 50%, $twilightBlue 50%);
+}
+
+
+.sectionFourContent,
+.sectionFourImages {
+    padding: 100px 0;
+}
+
+.sectionFourContent {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+// .sectionFourImages {
+//     background: $twilightBlue;
+// }
+
+.sectionFourImages ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.sectionFourImages ul li {
+    flex: 1 0  calc(100%/3 - 20px);
 }

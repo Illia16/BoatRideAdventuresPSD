@@ -1,7 +1,7 @@
 // Styles for body
 body {
     font-family: 'Roboto', sans-serif;
-    color: $twilightBlue;
+    // color: $twilightBlue;
     font-size: 2rem;
     line-height: 2.8rem;
     letter-spacing: 0.1rem;
@@ -12,7 +12,8 @@ body {
     transition: all 0.5s;
 }
 
-main {
+main,
+.sectionThree {
     background: $iceBlue;
 }
 
@@ -79,7 +80,8 @@ h2,
 h3,
 h4,
 button,
-input[type="submit"] {
+input[type="submit"],
+.sectionTwo ul li a {
     font-family: 'IM Fell English', serif;
 }
 
@@ -114,15 +116,46 @@ h4 {
     @include boxedSideHeadings(2.5rem, 5.8rem, 0.08rem);
 }
 
-button,
-input[type="submit"] {
-    border: none;
+h2,
+.sectionOne ::before {
+    color: $twilightBlue;
+}
+
+h3,
+.sectionTwo p {
+    color: $white;
+}
+
+.readMore {
+    padding: 5px 15px;
+}
+
+input[type="submit"],
+.readMore {
     font-size: 2.24rem;
     text-align: center;
     line-height: 4.16rem;
 
     background: $dandelion;
     color: $twilightBlue;
+    border:  3px solid transparent;
+}
+
+// .sectionTwo a {
+//     border:  3px solid transparent;
+// }
+
+// input[type="submit"] {
+//     border: none;
+// }
+
+.home main a:hover,
+.home main a:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+    background: none;
+    color: $dandelion;
+    border: 3px solid $dandelion;
 }
 
 

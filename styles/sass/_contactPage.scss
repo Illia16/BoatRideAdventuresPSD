@@ -116,13 +116,6 @@ input[type="submit"] {
     border: 3px solid transparent;
 }
 
-input[type="submit"]:hover,
-input[type="submit"]:focus {
-    background: none;
-    color: $dandelion;
-    border: 3px solid $dandelion;
-}
-
 .formContact .nameText input:focus {
     border: 3px solid $dandelion;
 }
