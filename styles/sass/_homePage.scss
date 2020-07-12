@@ -1,4 +1,4 @@
-// Styles for HomePage Header
+// Styles for HomePage Header ////////////////////////////
 
 .headerImage {
     width: 57%;
@@ -10,16 +10,13 @@
     // max-width: 1000px;
 }
 
-
-
-// Section ONE
+// Section ONE ////////////////////////////
 .sectionOne {
     padding: 250px 0;
 }
 
 .sectionOne ul {
-    display: flex;
-    flex-wrap: wrap;
+    @include flexWrap(flex, wrap);
 
     // display:grid;
     // grid-template-columns: repeat(2, 1fr);
@@ -74,11 +71,12 @@
 }
 
 
-// Section TWO
+// Section TWO ////////////////////////////
 
 .sectionTwo {
     background: $twilightBlue;
-    padding: 100px 0;
+    padding: 150px 0;
+    position: relative;
 }
 
 .sectionTwo h3 {
@@ -89,128 +87,109 @@
     margin-bottom: 40px;
 }
 
-.sectionTwo ul {
-    display: flex;
-    flex-wrap: wrap;
-    // flex-direction: column;
-}
-
+.sectionTwo ul,
 .sectionTwo ul li {
-    display: flex;
-    flex-wrap: wrap;
-
-    // justify-content: space-between;
-    // flex: 1 0 calc(40% - 20px);
-    // width: calc(100%/2 - 40px);
+    @include flexWrap(flex, wrap);
 }
 
-.sectionTwo ul li .sectionTwocontent,
-.sectionTwo ul li .sectionTwocontentImage {
-    // width: calc(100%/2 - 80px);
-    flex: 1 0 calc(100%/2 - 80px);
-}
-
-.sectionTwo .sectionTwocontent {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.sectionTwo .sectionTwocontentImage,
-.sectionTwo .sectionTwocontent {
-    min-width: 320px;
+.sectionTwo ul li .sectionTwocontent {
+    flex: 0 0 calc(100%/2 - 80px);
 }
 
 .sectionTwo ul li:first-child {
     margin-bottom: 50px;
+    justify-content: flex-end;
 }
 
 .sectionTwo ul li:last-child {
     margin-top: 50px;
     text-align: right;
+    justify-content: flex-start;
 }
 
-.sectionTwo ul li div:nth-of-type(2) {
-    margin-left: 80px;
-}
 
 .sectionTwo li:first-child img {
     box-shadow: 15px 15px $dandelion;
-    // position: absolute;
-    left: -10%;
-    top: -50%;
-    // width: 50%;
 }
 
 .sectionTwo li:last-child img {
     box-shadow: -15px 15px $dandelion;
-    // position: absolute;
-    right: -10%;
-    bottom: -50%;
-    // width: 50%;
 }
 
-// .sectionTwo li {
-//     position: relative;
-// }
+.sectionTwo li:first-child .sectionTwocontentImage,
+.sectionTwo li:last-child .sectionTwocontentImage {
+    position: absolute;
+    width: calc(50% - 60px);
+    min-width: 250px;
+    max-width: 800px;
+}
+
+.sectionTwo li:first-child .sectionTwocontentImage {
+    left: 0;
+    top: -25px;
+}
+
+.sectionTwo li:last-child .sectionTwocontentImage {
+    right: 0;
+    bottom: -50px;
+}
 
 
-// .sectionTwo li:first-child {
-//     position: absolute;
-//     left: 0;
-//     top: 0;
-// }
-
-// .sectionTwo li:last-child {
-//     position: absolute;
-//     right: 0;
-//     bottom: 0;
-// }
-
-
-// Section THREE
+// Section THREE ////////////////////////////
 .sectionThree .sectionThreeContent{
-    // height: calc(50vh - 200px);
-    width: 70%;
     text-align: center;
-    margin: 100px auto;
+    padding: 100px 0;
 }
 
 .sectionThreeBack {
-    height: 50vh;
     background-image: url(../assets/banner.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    @include background(cover, no-repeat, center);
+    min-height: 50vh;
 }
 
-// Section FOUR
-
-.sectionFour {
-    background: linear-gradient($iceBlue 50%, $twilightBlue 50%);
-}
-
-
+// Section FOUR ////////////////////////////
 .sectionFourContent,
 .sectionFourImages {
     padding: 100px 0;
 }
 
 .sectionFourContent {
-    display: flex;
-    flex-wrap: wrap;
+    @include flexWrap(flex, wrap);
 }
 
-// .sectionFourImages {
-//     background: $twilightBlue;
-// }
+.sectionFourContent .avatar {
+    flex: 1 0 calc(400px - 40px);
+    margin: 20px 20px 0;
+    padding: 0 0 15px 15px;
+}
 
-.sectionFourImages ul {
+.sectionFourContent .avatar img {
+    box-shadow: -15px 15px $dandelion;
+}
+
+.sectionFourContent .subContent {
+    flex: 1 0 calc(100% - 400px - 80px);
+    margin: 20px 20px 0;
+
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: space-between;
 }
 
+.sectionFourContent .subContent h2{
+    line-height: 4.98rem;
+}
+
+// Second part of section FOUR //
+.sectionFourImages {
+    background: $twilightBlue;
+}
+
+.sectionFourImages ul {
+    @include flexWrap(flex, wrap);
+}
+
 .sectionFourImages ul li {
-    flex: 1 0  calc(100%/3 - 20px);
+    flex: 1 0 250px;
+    margin: 20px;
 }

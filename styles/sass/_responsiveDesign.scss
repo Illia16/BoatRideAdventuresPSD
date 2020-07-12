@@ -1,4 +1,11 @@
 // Media quaries to Home &(or) Contact page /////////////////////////////////////////////
+
+@media (min-width: 1921px) {
+    .sectionTwo .wrapper {
+            position: relative;
+        }
+}
+
 @media (max-width: 1000px) {
 
     // Home quaries ///////////////////////////
@@ -21,6 +28,29 @@
 
     .sectionOne {
         padding: 100px 0;
+    }
+
+    // Section TWO
+
+    .sectionTwo li:first-child div:first-child,
+    .sectionTwo li:last-child .sectionTwocontentImage {
+        position: static;
+        width: 100%;
+    }
+    
+    .sectionTwo ul li div:nth-of-type(2) {
+        margin-left: 0;
+        margin-top: 50px;
+    }
+
+    .sectionTwo ul li .sectionTwocontent {
+        flex-grow: 1;
+    }
+
+
+    .sectionTwo ul li:first-child,
+    .sectionTwo ul li:last-child  {
+        justify-content: center;
     }
 
     // Home & Contact quaries ///////////////////////////
@@ -50,8 +80,7 @@
 
     .contactInfo {
         margin-bottom: 50px;
-        display: flex;
-        flex-wrap: wrap;
+        @include flexWrap(flex, wrap);
         justify-content: space-between;
         align-items: center;
     }
@@ -89,17 +118,18 @@
 
 
 
-
 @media (max-width: 500px) { 
     .home h1 {
         font-size: 4rem;
     }
 
-    .formContact .nameText input {
+    .formContact .nameText input,
+    .blog .formBlog .nameText input {
         width: 100%;
     }
 
-    .formContact .nameText input:nth-of-type(2) {
+    .formContact .nameText input:nth-of-type(2),
+    .blog .formBlog .nameText input:nth-of-type(2) {
         margin-top: $distanceBetween;
     }
 

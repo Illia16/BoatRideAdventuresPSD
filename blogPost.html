@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- adding fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@1&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/7daad3ad0b.js" crossorigin="anonymous"></script>
+
+    <!-- connecting styles -->
+    <link rel="stylesheet" href="./styles/styles.css">
+
+    <title>Project 2 - Blog Post</title>
+</head>
+<body class="blog">
+    <header>
+        <div class="wrapper">
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="/blogPost.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <h1>BLOG</h1>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="wrapper">
+                <div class="side">
+                    <div class="sideImage">
+                        <img src="./assets/blog-side-image.jpg" alt="image for the side information">
+                    </div>
+                    
+                    <div>
+                        <h4>OUR MISSION</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore enim soluta eligendi possimus beatae, alias voluptatum facilis fugiat. Hic, nihil?</p>
+                    </div>
+                    
+                    
+                    <div>
+                        <h4>RECENT POSTS</h4>
+                        <ul>
+                            <li>Lorem ipsum dolor sit.</li>
+                            <li>Lorem ipsum dolor sit.</li>
+                            <li>Lorem ipsum dolor sit.</li>
+                            <li>Lorem ipsum dolor sit.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mainContent">
+                    <article>
+                        <div class="acticleImage">
+                            <img src="./assets/blog-post-image.jpg" alt="image about the article below">
+                        </div>
+
+                        <div class="articleItself">
+                            <h2>NEXT DESTINATION</h2>
+                            <p>Monday, October 30, 2019 by Sulaire</p>
+    
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At veniam minima eveniet culpa quisquam vero? Aspernatur laudantium, modi id facilis facere, temporibus, rem dicta quaerat reprehenderit magni adipisci distinctio quam esse nemo officia quas? Repellendus aliquam consequuntur provident quos quam?</p>
+    
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae sint praesentium explicabo magnam, voluptas sequi quaerat neque dolorem illo, vero libero aspernatur blanditiis? Nemo fugit blanditiis incidunt voluptates repellendus consectetur mollitia reiciendis necessitatibus quidem quis perferendis, neque cumque accusantium nisi quos minima odit eos quae ut porro deserunt eveniet eaque ipsa! Asperiores illo architecto ea distinctio neque, in praesentium! Ut, officiis. Nostrum soluta adipisci, earum saepe beatae expedita id molestiae!</p>
+    
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus iste nemo odit beatae iure perspiciatis, eum quidem perferendis assumenda, ab unde natus optio odio, facere rerum ratione sint modi deleniti aperiam quaerat cum! Laborum architecto animi eveniet, nesciunt voluptatum nulla quisquam amet, neque aliquam perspiciatis, itaque quis fugit excepturi rerum laboriosam atque dolores. Facere, molestias repudiandae, atque quo laudantium maxime necessitatibus doloribus recusandae, accusamus deleniti nesciunt commodi animi officia nam quasi totam modi porro rerum at quis. Molestiae, atque exercitationem quae sed in ipsa, facere illum porro quam commodi modi optio facilis doloribus? Saepe ipsa, deleniti ducimus temporibus distinctio fugiat. Asperiores, totam dolorum. Sint dignissimos quo modi sapiente velit optio?</p>
+    
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia illum soluta asperiores explicabo natus eligendi molestias consequuntur, omnis vero rerum.</p>
+                        </div>
+                    </article>
+
+                    <div class="commentsContent">
+                        <h2>COMMENTS:</h2>
+
+                        <div class="comment">
+                            <div class="avatarUser">
+                                <img src="./assets/comment-1.jpg" alt="comment from ${username}">
+                            </div>
+
+                            <div class="commentItself">
+                                <time>Tuesday, October 9th, 2019 <span>by Ali</span></time> 
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque exercitationem corporis itaque qui incidunt animi, molestias id optio asperiores ducimus tempore saepe nisi, hic, eum harum rem nihil blanditiis commodi.</p>
+                            </div>
+                        </div>
+
+                        <div class="comment">
+                            <div class="avatarUser">
+                                <img src="./assets/comment-2.jpg" alt="comment from ${username}">
+                            </div>
+
+                            <div class="commentItself">
+                                <time>Wednesday, October 10th, 2019 <span>by Lisa</span></time>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque exercitationem corporis itaque qui incidunt animi, molestias id optio asperiores ducimus tempore saepe nisi, hic, eum harum rem nihil blanditiis commodi.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="formContact">
+                        <form action="">
+                            <div class="nameText">
+    
+                                <label for="name" class="sr-only">Name</label>
+                                <input type="text" id="name" class="name input-fields" name="name" placeholder="Name" required>
+                                
+                                <label for="email" class="sr-only">Email</label>
+                                <input type="email" id="email" class="email input-fields" name="email" placeholder="Email address" required>
+                                
+                            </div>
+    
+                            <label for="message" class="sr-only">Comment</label>
+                            <textarea name="message" id="message" class="input-fields" cols="70" rows="8" maxlength="200" placeholder="Message" required></textarea>
+    
+                            <input type="submit" class="submit" value="POST COMMENT">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright &#169 2020 Juno College Of Technology</p>
+    </footer>
+</body>
+</html>

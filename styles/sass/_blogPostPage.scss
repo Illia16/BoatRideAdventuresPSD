@@ -1,0 +1,173 @@
+// Blog post page HEADER //////////////////////////////////////////
+
+.blog header {
+    background-image: url(../assets/blog-header.jpg);
+}
+
+.blog header .wrapper {
+    justify-content: flex-start;
+    min-height: initial;
+}
+
+.blog h1 {
+    color: $white;
+    margin: 30px 0 150px 0;
+    width: 100%;
+}
+
+
+// Section //////////////////////////////////////////
+
+// .blog section .wrapper {
+//     max-width: 1920px; 
+//     width: 100%; 
+//     margin: 0 auto 0 5%;
+// }
+
+
+.blog section {
+    padding: 100px 0;
+}
+
+.side {
+    color: $white;
+    width: 25%;
+    height: 100%;
+    padding: 25px;
+    background: $twilightBlue;
+
+    min-width: 250px;
+    // flex: 0 0 250px;
+}
+
+.side ul {
+    list-style: initial;
+    padding: 0 20px;
+}
+
+.side .sideImage {
+    position: absolute;
+    left: calc(-5% - 25px);
+    top: -3%;
+    width: 30%;
+}
+
+.side div:nth-of-type(2) {
+    margin-top: 110%;
+}
+
+
+.blog .wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+}
+
+.blog .mainContent {
+    width: 60%;
+    // position: relative;
+
+    // flex: 0 0 calc(100% - 250px - 40px);
+}
+
+.blog .mainContent article {
+    border-left: 5px solid $dandelion;
+    border-bottom: 5px solid $dandelion;
+
+    position: relative;
+}
+
+.blog .acticleImage {
+    box-shadow: -15px 15px $dandelion;
+
+    position: absolute;
+    left: 10px;
+    top: -200px;
+}
+
+.blog .articleItself {
+    padding: 50% 100px 50px;
+}
+
+.mainContent article::after {
+    content: "";
+    position: absolute;
+    right: -15.5%;
+    bottom: 0;
+    background: $dandelion;
+    height: -5px;
+    width: 100%;
+}
+
+
+// Comments and FORM
+
+.blog .commentsContent {
+    padding: 30px 0 30px 100px;
+}
+
+.blog .comment {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 50px 0;
+} 
+
+.blog .comment .avatarUser {
+    flex: 0 0 80px;
+    // width: 80px;
+    // height: 80px;
+}
+
+.blog .commentItself {
+    display: flex;
+    flex-direction: column;
+    // width: calc(100% - 120px);
+    flex: 0 0 calc(100% - 80px - 40px);
+}
+
+.blog .commentItself time {
+    color: $twilightBlue;
+    font-weight: 600;
+}
+
+
+
+// Form for COMMENT
+.blog .formContact,
+.formContact .nameText input,
+.formContact textarea {
+    background: transparent;
+}
+
+.blog .formContact {
+    width: 100%;
+
+    position: static;
+    box-shadow: none;
+}
+
+.blog .formContact .nameText input,
+.blog .formContact textarea {
+    background: transparent;
+    caret-color: black;
+}
+
+.blog input[type="submit"] {
+    border: 3px solid $twilightBlue;
+    background: $twilightBlue;
+    color: $dandelion;
+}
+
+.blog input[type="submit"]:hover,
+.blog input[type="submit"]:focus {
+    background: transparent;
+    color: $twilightBlue;
+}
+
+.blog .formContact ::placeholder {
+    color: black;
+}
+
