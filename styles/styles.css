@@ -349,7 +349,7 @@ h3,
 h4,
 button,
 input[type="submit"],
-.sectionTwo ul li a {
+.readMore {
   font-family: 'IM Fell English', serif;
 }
 
@@ -415,9 +415,91 @@ input[type="submit"],
 .home main a:focus,
 input[type="submit"]:hover,
 input[type="submit"]:focus {
-  background: none;
+  background: transparent;
   color: #FDD908;
   border: 3px solid #FDD908;
+}
+
+.formContact,
+.formContact .nameText input,
+.formContact textarea {
+  background: #0D457F;
+}
+
+.formContact .nameText input,
+.formContact textarea {
+  color: #FFFFFF;
+  padding: 20px;
+}
+
+.formContact {
+  padding: 40px;
+}
+
+.formContact,
+.formContact textarea,
+input[type="submit"] {
+  width: 100%;
+}
+
+.formContact .nameText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.formContact .nameText input,
+input[type="submit"] {
+  border: 3px solid transparent;
+}
+
+.formContact .nameText input {
+  width: calc((100%/2) - (40px/2));
+  height: 40px;
+  border-bottom: 3px solid #FDD908;
+}
+
+.formContact textarea,
+input[type="submit"] {
+  margin-top: 40px;
+}
+
+.formContact textarea {
+  resize: none;
+}
+
+input[type="submit"] {
+  height: 40px;
+}
+
+.formContact textarea,
+.formContact .nameText input:focus {
+  border: 3px solid #FDD908;
+}
+
+.formContact ::-webkit-input-placeholder {
+  color: #FFFFFF;
+  opacity: 1;
+}
+
+.formContact :-ms-input-placeholder {
+  color: #FFFFFF;
+  opacity: 1;
+}
+
+.formContact ::-ms-input-placeholder {
+  color: #FFFFFF;
+  opacity: 1;
+}
+
+.formContact ::placeholder {
+  color: #FFFFFF;
+  opacity: 1;
 }
 
 footer {
@@ -431,12 +513,13 @@ footer p {
 }
 
 .headerImage {
-  width: 57%;
+  width: 50%;
   max-width: 1000px;
   position: absolute;
   right: 0;
-  bottom: -250px;
+  bottom: -30%;
   min-width: 300px;
+  max-width: 700px;
 }
 
 .sectionOne {
@@ -665,17 +748,35 @@ footer p {
   width: 100%;
 }
 
+.blog .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  max-width: 1920px;
+  width: 95%;
+  margin: 0 0 0 auto;
+}
+
 .blog section {
   padding: 100px 0;
 }
 
 .side {
   color: #FFFFFF;
-  width: 25%;
   height: 100%;
   padding: 25px;
   background: #0D457F;
-  min-width: 250px;
+  margin-right: 150px;
+  margin-bottom: 275px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 350px;
+          flex: 0 0 350px;
 }
 
 .side ul {
@@ -686,28 +787,19 @@ footer p {
 .side .sideImage {
   position: absolute;
   left: calc(-5% - 25px);
-  top: -3%;
-  width: 30%;
+  top: -25px;
+  min-width: 250px;
+  max-width: 400px;
 }
 
 .side div:nth-of-type(2) {
-  margin-top: 110%;
-}
-
-.blog .wrapper {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  margin-top: 125%;
 }
 
 .blog .mainContent {
-  width: 60%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 calc(100% - 350px - 150px);
+          flex: 1 0 calc(100% - 350px - 150px);
 }
 
 .blog .mainContent article {
@@ -720,26 +812,26 @@ footer p {
   -webkit-box-shadow: -15px 15px #FDD908;
           box-shadow: -15px 15px #FDD908;
   position: absolute;
-  left: 10px;
+  right: 0;
   top: -200px;
+  width: calc(100% - 10px);
 }
 
 .blog .articleItself {
-  padding: 50% 100px 50px;
+  padding: 55% 8% 50px;
 }
 
 .mainContent article::after {
   content: "";
   position: absolute;
-  right: -15.5%;
-  bottom: 0;
+  right: calc(-9% - 10px);
+  bottom: -5px;
   background: #FDD908;
-  height: -5px;
-  width: 100%;
+  height: 5px;
 }
 
 .blog .commentsContent {
-  padding: 30px 0 30px 100px;
+  padding: 30px 8%;
 }
 
 .blog .comment {
@@ -779,16 +871,9 @@ footer p {
 }
 
 .blog .formContact,
-.formContact .nameText input,
-.formContact textarea {
+.blog .formContact .nameText input,
+.blog .formContact textarea {
   background: transparent;
-}
-
-.blog .formContact {
-  width: 100%;
-  position: static;
-  -webkit-box-shadow: none;
-          box-shadow: none;
 }
 
 .blog .formContact .nameText input,
@@ -896,85 +981,16 @@ footer p {
   color: #FDD908;
 }
 
-.formContact,
-.formContact .nameText input,
-.formContact textarea {
-  background: #0D457F;
-}
-
-.formContact .nameText input,
-.formContact textarea {
-  color: #FFFFFF;
-  padding: 20px;
-}
-
-.formContact {
+.contact .formContact {
+  -webkit-box-shadow: 15px 15px #FDD908;
+          box-shadow: 15px 15px #FDD908;
   -webkit-box-flex: 1;
       -ms-flex: 1 0 320px;
           flex: 1 0 320px;
-  padding: 40px;
   width: 65%;
   position: absolute;
   right: 0;
   bottom: -70%;
-  -webkit-box-shadow: 15px 15px #FDD908;
-          box-shadow: 15px 15px #FDD908;
-}
-
-.formContact .nameText {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.formContact .nameText input {
-  width: calc((100%/2) - (40px/2));
-  height: 40px;
-  border: 3px solid transparent;
-  border-bottom: 3px solid #FDD908;
-}
-
-.formContact textarea {
-  width: 100%;
-  border: 3px solid #FDD908;
-  margin-top: 40px;
-  resize: none;
-}
-
-input[type="submit"] {
-  height: 40px;
-  margin-top: 40px;
-  width: 100%;
-  border: 3px solid transparent;
-}
-
-.formContact .nameText input:focus {
-  border: 3px solid #FDD908;
-}
-
-.formContact ::-webkit-input-placeholder {
-  color: white;
-  opacity: 1;
-}
-
-.formContact :-ms-input-placeholder {
-  color: white;
-  opacity: 1;
-}
-
-.formContact ::-ms-input-placeholder {
-  color: white;
-  opacity: 1;
-}
-
-.formContact ::placeholder {
-  color: white;
-  opacity: 1;
 }
 
 @media (min-width: 1921px) {
@@ -1058,10 +1074,26 @@ input[type="submit"] {
   .contactInfo p:first-of-type {
     margin-right: 25px;
   }
-  .formContact {
+  .contact .formContact {
     position: static;
     -webkit-box-shadow: 10px 10px #FDD908;
             box-shadow: 10px 10px #FDD908;
+  }
+}
+
+@media (max-width: 829px) {
+  .blog .side {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
+  }
+  .blog .side .sideImage {
+    position: static;
+    width: 100%;
+    max-width: initial;
+  }
+  .blog .side div:nth-of-type(2) {
+    margin-top: 0;
   }
 }
 
@@ -1091,5 +1123,9 @@ input[type="submit"] {
   .formContact .nameText input:nth-of-type(2),
   .blog .formBlog .nameText input:nth-of-type(2) {
     margin-top: 40px;
+  }
+  .blog h2 {
+    font-size: 3rem;
+    text-align: center;
   }
 }

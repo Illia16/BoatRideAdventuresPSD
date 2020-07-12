@@ -78,7 +78,7 @@ h3,
 h4,
 button,
 input[type="submit"],
-.sectionTwo ul li a {
+.readMore {
     font-family: 'IM Fell English', serif;
 }
 
@@ -139,23 +139,78 @@ input[type="submit"],
     border:  3px solid transparent;
 }
 
-// .sectionTwo a {
-//     border:  3px solid transparent;
-// }
-
-// input[type="submit"] {
-//     border: none;
-// }
 
 .home main a:hover,
 .home main a:focus,
 input[type="submit"]:hover,
 input[type="submit"]:focus {
-    background: none;
+    background: transparent;
     color: $dandelion;
     border: 3px solid $dandelion;
 }
 
+
+// Reusable FORM
+.formContact,
+.formContact .nameText input,
+.formContact textarea {
+    background: $twilightBlue;
+}
+
+.formContact .nameText input,
+.formContact textarea {
+    color: $white;
+    padding: 20px;
+}
+
+.formContact {
+    padding: $distanceBetween;
+}
+
+.formContact,
+.formContact textarea,
+input[type="submit"] {
+    width: 100%;
+}
+
+.formContact .nameText {
+    @include flexWrap(flex, wrap);
+    justify-content: space-between;
+}
+
+.formContact .nameText input,
+input[type="submit"] {
+    border: 3px solid transparent;
+}
+
+.formContact .nameText input {
+    width: calc((100%/2) - (40px/2));
+    height: $distanceBetween;
+    border-bottom: 3px solid $dandelion;
+}
+
+.formContact textarea,
+input[type="submit"] {
+    margin-top: $distanceBetween;
+}
+
+.formContact textarea {
+    resize: none;
+}
+
+input[type="submit"] {
+    height: $distanceBetween;
+}
+
+.formContact textarea,
+.formContact .nameText input:focus {
+    border: 3px solid $dandelion;
+}
+
+.formContact ::placeholder {
+    color: $white;
+    opacity: 1;
+}
 
 // Footer for ALL pages
 footer {

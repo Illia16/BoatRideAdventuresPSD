@@ -65,62 +65,13 @@
 }
 
 // Form //////////////////////
-.formContact,
-.formContact .nameText input,
-.formContact textarea {
-    background: $twilightBlue;
-}
 
-.formContact .nameText input,
-.formContact textarea {
-    color: $white;
-    padding: 20px;
-}
-
-.formContact {
+.contact .formContact {
+    box-shadow: 15px 15px $dandelion;
+    
     flex: 1 0 320px;
-    padding: $distanceBetween;
-
     width: 65%;
-
     position: absolute;
     right: 0;
     bottom: -70%;
-    box-shadow: 15px 15px $dandelion;
-}
-
-.formContact .nameText {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.formContact .nameText input {
-    width: calc((100%/2) - (40px/2));
-    height: $distanceBetween;
-    border: 3px solid transparent;
-    border-bottom: 3px solid $dandelion;
-}
-
-.formContact textarea {
-    width: 100%;
-    border: 3px solid $dandelion;
-    margin-top: $distanceBetween;
-    resize: none;
-}
-
-input[type="submit"] {
-    height: $distanceBetween;
-    margin-top: $distanceBetween;
-    width: 100%;
-    border: 3px solid transparent;
-}
-
-.formContact .nameText input:focus {
-    border: 3px solid $dandelion;
-}
-
-.formContact ::placeholder {
-    color: white;
-    opacity: 1;
 }
