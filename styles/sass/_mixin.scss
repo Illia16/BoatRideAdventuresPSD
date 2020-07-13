@@ -4,7 +4,6 @@
     letter-spacing: $letterSpacingSize;
 }
 
-
 @mixin flexWrap($flex, $wrap) {
     display: $flex;
     flex-wrap: $wrap;

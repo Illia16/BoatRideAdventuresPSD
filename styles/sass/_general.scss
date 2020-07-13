@@ -47,7 +47,7 @@ header nav a {
     position: relative;
 }
 
-nav li a::after {
+header li a::after {
     content: "";
     position: absolute;
     right: $aClickableSpaceLR;
@@ -59,8 +59,8 @@ nav li a::after {
     transition: all 0.5s;
 }
 
-nav li a:hover::after,
-nav li a:focus::after {
+header li a:hover::after,
+header li a:focus::after {
     opacity: 1;
 }
 
