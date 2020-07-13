@@ -385,6 +385,7 @@ h4 {
   line-height: 5.8rem;
   letter-spacing: 0.08rem;
   color: #FDD908;
+  margin: 0;
 }
 
 h2,
@@ -418,6 +419,11 @@ input[type="submit"]:focus {
   background: transparent;
   color: #FDD908;
   border: 3px solid #FDD908;
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
 }
 
 .formContact,
@@ -514,7 +520,6 @@ footer p {
 
 .headerImage {
   width: 50%;
-  max-width: 1000px;
   position: absolute;
   right: 0;
   bottom: -30%;
@@ -603,7 +608,7 @@ footer p {
       flex-wrap: wrap;
 }
 
-.sectionTwo ul li .sectionTwocontent {
+.sectionTwo ul .sectionTwocontent {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 calc(100%/2 - 80px);
           flex: 0 0 calc(100%/2 - 80px);
@@ -634,8 +639,8 @@ footer p {
           box-shadow: -15px 15px #FDD908;
 }
 
-.sectionTwo li:first-child .sectionTwocontentImage,
-.sectionTwo li:last-child .sectionTwocontentImage {
+.sectionTwo .sectionTwocontentImage,
+.sectionTwo .sectionTwocontentImage {
   position: absolute;
   width: calc(50% - 60px);
   min-width: 250px;
@@ -792,7 +797,7 @@ footer p {
   max-width: 400px;
 }
 
-.side div:nth-of-type(2) {
+.side .sideInfo {
   margin-top: 125%;
 }
 
@@ -809,25 +814,16 @@ footer p {
 }
 
 .blog .acticleImage {
+  width: calc(100% - 10px);
   -webkit-box-shadow: -15px 15px #FDD908;
           box-shadow: -15px 15px #FDD908;
   position: absolute;
   right: 0;
   top: -200px;
-  width: calc(100% - 10px);
 }
 
 .blog .articleItself {
   padding: 55% 8% 50px;
-}
-
-.mainContent article::after {
-  content: "";
-  position: absolute;
-  right: calc(-9% - 10px);
-  bottom: -5px;
-  background: #FDD908;
-  height: 5px;
 }
 
 .blog .commentsContent {
@@ -838,18 +834,19 @@ footer p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 50px 0;
 }
 
 .blog .comment .avatarUser {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 80px;
-          flex: 0 0 80px;
+      -ms-flex: 0 0 100px;
+          flex: 0 0 100px;
+  margin-right: 40px;
 }
 
 .blog .commentItself {
@@ -860,9 +857,9 @@ footer p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 calc(100% - 80px - 40px);
-          flex: 0 0 calc(100% - 80px - 40px);
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 300px;
+          flex: 1 0 300px;
 }
 
 .blog .commentItself time {
@@ -871,12 +868,7 @@ footer p {
 }
 
 .blog .formContact,
-.blog .formContact .nameText input,
-.blog .formContact textarea {
-  background: transparent;
-}
-
-.blog .formContact .nameText input,
+.blog .nameText input,
 .blog .formContact textarea {
   background: transparent;
   caret-color: black;
@@ -927,7 +919,7 @@ footer p {
   min-height: initial;
 }
 
-.contact header nav ul {
+.contact header ul {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
 }
@@ -967,7 +959,7 @@ footer p {
   margin-right: 10px;
 }
 
-.contactInfo ul li:first-child a {
+.contactInfo li:first-child a {
   padding-left: 0;
 }
 
@@ -993,6 +985,21 @@ footer p {
   bottom: -70%;
 }
 
+@media (min-width: 2100px) {
+  .home h1 {
+    width: 100%;
+    text-align: center;
+  }
+  .headerImage {
+    position: static;
+    margin: 0 0 0 auto;
+  }
+  .blog .wrapper {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
 @media (min-width: 1921px) {
   .sectionTwo .wrapper {
     position: relative;
@@ -1003,9 +1010,6 @@ footer p {
   header {
     background-position: left;
   }
-  .home h1 {
-    width: 100%;
-  }
   .home header .headerImage {
     position: static;
     width: 75%;
@@ -1014,16 +1018,16 @@ footer p {
   .sectionOne {
     padding: 100px 0;
   }
-  .sectionTwo li:first-child div:first-child,
-  .sectionTwo li:last-child .sectionTwocontentImage {
+  .sectionTwo .sectionTwocontentImage,
+  .sectionTwo .sectionTwocontentImage {
     position: static;
     width: 100%;
   }
-  .sectionTwo ul li div:nth-of-type(2) {
+  .sectionTwo li div:nth-of-type(2) {
     margin-left: 0;
     margin-top: 50px;
   }
-  .sectionTwo ul li .sectionTwocontent {
+  .sectionTwo li .sectionTwocontent {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
@@ -1035,6 +1039,7 @@ footer p {
             justify-content: center;
   }
   h1 {
+    width: 100%;
     font-size: 6rem;
     text-align: center;
     margin: 30px 0;
@@ -1092,7 +1097,7 @@ footer p {
     width: 100%;
     max-width: initial;
   }
-  .blog .side div:nth-of-type(2) {
+  .blog .side .sideInfo {
     margin-top: 0;
   }
 }
@@ -1107,7 +1112,7 @@ footer p {
 }
 
 @media (max-width: 621px) {
-  .sectionTwo ul li div:nth-of-type(2) {
+  .sectionTwo li div:nth-of-type(2) {
     margin-left: 0;
   }
 }
@@ -1120,8 +1125,7 @@ footer p {
   .blog .formBlog .nameText input {
     width: 100%;
   }
-  .formContact .nameText input:nth-of-type(2),
-  .blog .formBlog .nameText input:nth-of-type(2) {
+  .formContact .nameText input:nth-of-type(2) {
     margin-top: 40px;
   }
   .blog h2 {

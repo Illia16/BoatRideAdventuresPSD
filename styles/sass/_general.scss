@@ -1,7 +1,6 @@
 // Styles for body
 body {
     font-family: 'Roboto', sans-serif;
-    // color: $twilightBlue;
     font-size: 2rem;
     line-height: 2.8rem;
     letter-spacing: 0.1rem;
@@ -88,7 +87,6 @@ textarea {
 font-family: 'Roboto', sans-serif;
 }
 
-
 h1 {
     font-size: 7.9rem;
     color: $dandelion;
@@ -112,6 +110,7 @@ h3 {
 h4 {
     @include boxedSideHeadings(2.5rem, 5.8rem, 0.08rem);
     color: $dandelion;
+    margin: 0;
 }
 
 h2,
@@ -139,7 +138,6 @@ input[type="submit"],
     border:  3px solid transparent;
 }
 
-
 .home main a:hover,
 .home main a:focus,
 input[type="submit"]:hover,
@@ -149,8 +147,12 @@ input[type="submit"]:focus {
     border: 3px solid $dandelion;
 }
 
-
 // Reusable FORM
+fieldset {
+    border: 0;
+    padding: 0;
+}
+
 .formContact,
 .formContact .nameText input,
 .formContact textarea {

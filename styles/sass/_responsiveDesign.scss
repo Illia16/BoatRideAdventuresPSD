@@ -1,23 +1,40 @@
 // Media quaries to Home &(or) Contact page /////////////////////////////////////////////
 
+// for extra-wide screens, making sure that the stuff doesn't go to the side(s)
+@media (min-width: 2100px) {
+    // Home page
+    .home h1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .headerImage {
+        position: static;
+        margin: 0 0 0 auto;
+    }
+    
+    // Blog page
+    .blog .wrapper {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
 @media (min-width: 1921px) {
+    // Home page
     .sectionTwo .wrapper {
-            position: relative;
-        }
+        position: relative;
+    }
 }
 
 @media (max-width: 1000px) {
 
-    // Home quaries ///////////////////////////
+    // Home page quaries ///////////////////////////
 
     // our white-colored links interact with background white boats
     // it's hard to read. So, either change font color or reposition background. 
     header {
-        background-position: left; 
-    }
-
-    .home h1 {
-        width: 100%;
+        background-position: left;
     }
 
     .home header .headerImage {
@@ -31,19 +48,18 @@
     }
 
     // Section TWO
-
-    .sectionTwo li:first-child div:first-child,
-    .sectionTwo li:last-child .sectionTwocontentImage {
+    .sectionTwo .sectionTwocontentImage,
+    .sectionTwo .sectionTwocontentImage {
         position: static;
         width: 100%;
     }
     
-    .sectionTwo ul li div:nth-of-type(2) {
+    .sectionTwo li div:nth-of-type(2) {
         margin-left: 0;
         margin-top: 50px;
     }
 
-    .sectionTwo ul li .sectionTwocontent {
+    .sectionTwo li .sectionTwocontent {
         flex-grow: 1;
     }
 
@@ -53,8 +69,9 @@
         justify-content: center;
     }
 
-    // Home & Contact quaries ///////////////////////////
+    // Home & Contact pages quaries ///////////////////////////
     h1 {
+        width: 100%;
         font-size: 6rem;
         text-align: center;
         margin: 30px 0;
@@ -69,7 +86,7 @@
         flex-direction: column;
     }
 
-    // Contact quaries ///////////////////////////
+    // Contact page quaries ///////////////////////////
     .contact section .wrapper {
         justify-content: center;
     }
@@ -97,6 +114,7 @@
 
 @media (max-width: 829px) {
 
+    // BLOG page quaries
     .blog .side {
         flex: 1 0 100%;
     }
@@ -107,12 +125,13 @@
         max-width: initial;
     }
 
-    .blog .side div:nth-of-type(2) {
+    .blog .side .sideInfo {
         margin-top: 0;
     }
 }
 
 @media (max-width: 799.5px) {
+    // HOME page quaries
     .sectionTwo h3 {
         margin: 40px 0;
     }
@@ -122,20 +141,15 @@
     }
 }
 
-
 @media (max-width: 621px) {
-
-    // Section TWO
-    .sectionTwo ul li div:nth-of-type(2) {
+    // HOME page quaries
+    .sectionTwo li div:nth-of-type(2) {
         margin-left: 0;
     }
 }
 
-
-
-
-
 @media (max-width: 500px) { 
+    // HOME page quaries
     .home h1 {
         font-size: 4rem;
     }
@@ -145,8 +159,7 @@
         width: 100%;
     }
 
-    .formContact .nameText input:nth-of-type(2),
-    .blog .formBlog .nameText input:nth-of-type(2) {
+    .formContact .nameText input:nth-of-type(2) {
         margin-top: $distanceBetween;
     }
 
@@ -154,7 +167,4 @@
         font-size: 3rem;
         text-align: center;
     }
-
 }
-
-

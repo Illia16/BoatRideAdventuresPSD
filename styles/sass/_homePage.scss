@@ -1,8 +1,6 @@
 // Styles for HomePage Header ////////////////////////////
-
 .headerImage {
     width: 50%;
-    max-width: 1000px;
     position: absolute;
     right: 0;
     bottom: -30%;
@@ -17,12 +15,6 @@
 
 .sectionOne ul {
     @include flexWrap(flex, wrap);
-
-    // display:grid;
-    // grid-template-columns: repeat(2, 1fr);
-    // grid-row: auto auto;
-    // grid-column-gap: 20px;
-    // grid-row-gap: 20px;
 }
 
 .sectionOne ul li {
@@ -92,7 +84,7 @@
     @include flexWrap(flex, wrap);
 }
 
-.sectionTwo ul li .sectionTwocontent {
+.sectionTwo ul .sectionTwocontent {
     flex: 0 0 calc(100%/2 - 80px);
 }
 
@@ -116,8 +108,8 @@
     box-shadow: -15px 15px $dandelion;
 }
 
-.sectionTwo li:first-child .sectionTwocontentImage,
-.sectionTwo li:last-child .sectionTwocontentImage {
+.sectionTwo .sectionTwocontentImage,
+.sectionTwo .sectionTwocontentImage {
     position: absolute;
     width: calc(50% - 60px);
     min-width: 250px;

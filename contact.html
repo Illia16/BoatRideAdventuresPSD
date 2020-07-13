@@ -12,7 +12,7 @@
     <!-- connecting styles -->
     <link rel="stylesheet" href="./styles/styles.css">
 
-    <title>Project 2 - Contact</title>
+    <title>Boat Ride Adventures - Contact</title>
 </head>
 <body class="contact">
     <header>
@@ -32,7 +32,9 @@
 
     <main>
         <section>
+            <!-- SECTION'S WRAPPER -->
             <div class="wrapper">
+                <!-- CONTACT INFO -->
                 <div class="contactInfo">
                     <ul>
                         <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
@@ -49,27 +51,30 @@
                     Toronto Ontario
                     M5V 2D5
                     </p>
-                </div>
+                </div>  <!-- CONTACT INFO ENDS -->
 
+                <!-- FORM -->
                 <div class="formContact">
                     <form action="">
-                        <div class="nameText">
+                        <fieldset>
+                            <fieldset class="nameText">
 
-                            <label for="name" class="sr-only">Name</label>
-                            <input type="text" id="name" class="name input-fields" name="name" placeholder="Name" required>
-                            
-                            <label for="email" class="sr-only">Email</label>
-                            <input type="email" id="email" class="email input-fields" name="email" placeholder="Email address" required>
-                            
-                        </div>
+                                <label for="name" class="sr-only">Name</label>
+                                <input type="text" id="name" class="name input-fields" name="name" placeholder="Name" required>
+                                
+                                <label for="email" class="sr-only">Email</label>
+                                <input type="email" id="email" class="email input-fields" name="email" placeholder="Email address" required>
+                                
+                            </fieldset>
 
-                        <label for="message" class="sr-only">Message</label>
-                        <textarea name="message" id="message" class="input-fields" cols="70" rows="8" maxlength="200" placeholder="Message" required></textarea>
+                            <label for="message" class="sr-only">Message</label>
+                            <textarea name="message" id="message" class="input-fields" cols="70" rows="8" maxlength="200" placeholder="Message" required></textarea>
 
-                        <input type="submit" class="submit" value="SUBMIT">
+                            <input type="submit" class="submit" value="SUBMIT">
+                        </fieldset>
                     </form>
-                </div>
-            </div>
+                </div> <!-- FORM ENDS -->
+            </div>  <!-- SECTION'S WRAPPER ENDS -->
         </section>
     </main>
 
