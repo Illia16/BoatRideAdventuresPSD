@@ -67,7 +67,6 @@
     }
 
     // Section TWO
-    .sectionTwo .sectionTwocontentImage,
     .sectionTwo .sectionTwocontentImage {
         position: static;
         width: 100%;
@@ -170,6 +169,10 @@
     // HOME page quaries
     .home h1 {
         font-size: 4rem;
+    }
+
+    .home h2 {
+        font-size: 3.2rem;
     }
 
     // BLOG page quaries and FORM adjustment

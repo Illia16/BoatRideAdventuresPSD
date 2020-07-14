@@ -20,20 +20,10 @@
 .sectionOne ul li {
     flex: 1 0 calc(100%/2 - 70px);
     margin-left: 70px;
-}
-
-.sectionOne ul li:nth-child(1),
-.sectionOne ul li:nth-child(2),
-.sectionOne ul li:nth-child(3),
-.sectionOne ul li:nth-child(4) {
     position: relative;
 }
 
-
-.sectionOne ul li:nth-child(1)::before,
-.sectionOne ul li:nth-child(2)::before,
-.sectionOne ul li:nth-child(3)::before,
-.sectionOne ul li:nth-child(4)::before {
+.sectionOne ul li::before {
     font: normal normal normal 2.5rem/1 FontAwesome;
     position: absolute;
     left: -70px;
@@ -108,7 +98,6 @@
     box-shadow: -15px 15px $dandelion;
 }
 
-.sectionTwo .sectionTwocontentImage,
 .sectionTwo .sectionTwocontentImage {
     position: absolute;
     width: calc(50% - 60px);
@@ -150,7 +139,7 @@
 }
 
 .sectionFourContent .avatar {
-    flex: 1 0 calc(400px - 40px);
+    flex: 1 1 calc(400px - 40px);
     margin: 20px 20px 0;
     padding: 0 0 15px 15px;
 }
