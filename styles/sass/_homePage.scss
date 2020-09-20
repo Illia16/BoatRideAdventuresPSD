@@ -4,7 +4,7 @@
     position: absolute;
     right: 0;
     bottom: -30%;
-    min-width: 300px;
+    min-width: 200px;
     max-width: 700px;
 }
 
@@ -168,9 +168,11 @@
 
 .sectionFourImages ul {
     @include flexWrap(flex, wrap);
+    justify-content: center;
 }
 
 .sectionFourImages ul li {
-    flex: 1 0 250px;
+    flex: 1 0 200px;
     margin: 20px;
+    max-width: 400px;
 }

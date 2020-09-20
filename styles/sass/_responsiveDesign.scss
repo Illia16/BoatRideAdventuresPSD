@@ -168,11 +168,12 @@
 @media (max-width: 500px) { 
     // HOME page quaries
     .home h1 {
-        font-size: 4rem;
+        font-size: 3.2rem;
     }
 
     .home h2 {
-        font-size: 3.2rem;
+        font-size: 2.3rem;
+        line-height: 5rem;
     }
 
     // BLOG page quaries and FORM adjustment
@@ -193,5 +194,31 @@
 
     .blog .articleItself {
         padding-top: 25%;
+    }
+}
+
+
+@media (max-width: 350px) {
+    .side {
+        margin-bottom: 50px;
+    }
+
+    .blog .wrapper {
+        margin: 0 auto;
+    }
+
+    .blog .mainContent article {
+        border: none;
+
+        .acticleImage {
+            width: 100%;
+            position: static;
+            box-shadow: none;
+            -webkit-box-shadow: none;
+        }
+    }
+
+    .formContact {
+        padding: 20px 8%;
     }
 }
